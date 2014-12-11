@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package randomnumbers2;
+
+import java.util.Random;
+/**
+ *
+ * @author javauser
+ */
+public class RandomNumbers2 {
+    public int[] getSixRandoms(int upper_value){
+        int[] randoms = new int[6];
+        for (int i = 0; i < randoms.length; i++){
+            randoms[i] = 1 + new Random().nextInt(upper_value);
+        }
+        return randoms;
+    }
+    
+    /**
+     * @param args the command line arguments
+     */
+public static void main(String[] args) {
+        // TODO code application logic here
+        int[] my_randoms = (new RandomNumbers2()).getSixRandoms(101);
+        int number_of_randoms = my_randoms.length;
+        
+        for (int i = 0; i <number_of_randoms; i++){
+            System.out.println(my_randoms[i]);
+        }
+    }
+    
+}
